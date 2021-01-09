@@ -16,21 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: fa0bb731c83b7b64db81c3c6dfc1429b
-  m_SerializeEntries:
-  - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
-    m_Address: GirlScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - remote
-    m_MainAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-  - m_GUID: e84bfdc56443e3b428e02eeae04a44ed
-    m_Address: PlantScene
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - remote
-    m_MainAsset: {fileID: 102900000, guid: e84bfdc56443e3b428e02eeae04a44ed, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: e84bfdc56443e3b428e02eeae04a44ed, type: 3}
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0ffd989adc129954e981fd27f8b8b4b6, type: 2}
   m_SchemaSet:
