@@ -17,12 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ce79f7577245b3b48a84eed0f974ec42
   m_SerializeEntries:
-  - m_GUID: 003166bd27a2ec04b9cead16a741897f
-    m_Address: Button
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
   - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
     m_Address: GirlScene
     m_ReadOnly: 0
@@ -37,12 +31,6 @@ MonoBehaviour:
     - remote
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
-  - m_GUID: f6654f0f7639de64a843d151643e4800
-    m_Address: coin
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    m_MainAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
-    m_TargetAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0ffd989adc129954e981fd27f8b8b4b6, type: 2}
   m_SchemaSet:
