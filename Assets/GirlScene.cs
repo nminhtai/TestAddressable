@@ -5,6 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GirlScene : MonoBehaviour {
     public void ButtonPressed() {
-        SceneManager.LoadScene("PlantScent");
+        SceneManager.LoadScene("PlantScene");
     }
 }

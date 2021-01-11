@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: fa0bb731c83b7b64db81c3c6dfc1429b
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
-  m_DisableCatalogUpdateOnStart: 0
+  m_DisableCatalogUpdateOnStart: 1
   m_UniqueBundleIds: 0
   m_RemoteCatalogBuildPath:
     m_Id: cf4b223f368b330439cab297f8d098f7

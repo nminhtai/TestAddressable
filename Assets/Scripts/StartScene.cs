@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.AddressableAssets.ResourceLocators;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class StartScene : MonoBehaviour {
@@ -35,29 +37,115 @@ public class StartScene : MonoBehaviour {
 
     //}
 
-    void Start() {
-        Addressables.CheckForCatalogUpdates().Completed += CheckForCatalogUpdates_Completed;
-        Addressables.UpdateCatalogs().Completed += UpdateCatalogs_Completed;
-    }
+    //void test() {
+    //    Addressables.InitializeAsync().Completed += objects =>
+    //    {
+    //        Addressables.CheckForCatalogUpdates().Completed += checkforupdates =>
+    //        {
+    //            if (checkforupdates.Result.Count > 0)
+    //                Addressables.UpdateCatalogs().Completed += updates => Load(label);
+    //            else
+    //                Load(LabelsToDownload);
+    //        };
+    //    };
+    //}
 
-    private void UpdateCatalogs_Completed(AsyncOperationHandle<List<UnityEngine.AddressableAssets.ResourceLocators.IResourceLocator>> obj) {
-        Debug.Log("UpdateCatalogs_Completed");
-        if (obj.Result != null) {
-            foreach (var item in obj.Result) {
+    const string label = "remote";
+    IEnumerator Start() {
+        Debug.Log("StartScene Start");
+        AsyncOperationHandle<IResourceLocator> handle = Addressables.InitializeAsync();
+        yield return handle;
+
+
+        List<string> updates = new List<string>();
+        Addressables.CheckForCatalogUpdates().Completed += op => {
+            Debug.Log("CheckForCatalogUpdates");
+            updates.AddRange(op.Result);
+            foreach (var item in updates) {
                 Debug.Log(item);
             }
-        }
+        };
+
+
+
+        Addressables.GetDownloadSizeAsync(label).Completed += sizeOp=> {
+            Debug.Log($"GetDownloadSizeAsync {sizeOp.Result}");
+            Addressables.DownloadDependenciesAsync(label).Completed += downloadOp => {
+                Debug.Log($"Download Done");
+                Addressables.LoadSceneAsync("GirlScene");
+            };
+        };
+
+
+        //StartCoroutine(PercentTracking());
+        yield break;
     }
 
-    private void CheckForCatalogUpdates_Completed(AsyncOperationHandle<List<string>> obj) {
-        Debug.Log("CheckForCatalogUpdates_Completed");
-        if (obj.Result != null) {
-            foreach (var item in obj.Result) {
-                Debug.Log(item);
+    IEnumerator PercentTracking() {
+        //Debug.Log("PercentTracking");
+        //Caching.ClearCache();
+        yield return new WaitForSeconds(5);
+
+        Addressables.GetDownloadSizeAsync(label).Completed += op => {
+            Debug.Log($"GetDownloadSizeAsync_Completed: size {op.Result}");
+            var handle = Addressables.DownloadDependenciesAsync(label);
+            while (!handle.IsDone) {
+                Debug.Log($"PercentTracking {handle.PercentComplete}");
             }
-        }
-
+        };
     }
+
+    //IEnumerator UpdateCatalogs() {
+    //    List<string> catalogsToUpdate = new List<string>();
+    //    AsyncOperationHandle<List<string>> checkForUpdateHandle = Addressables.CheckForCatalogUpdates();
+    //    checkForUpdateHandle.Completed += op => {
+    //        Debug.Log("UpdateCatalogs completed");
+    //        foreach (var item in catalogsToUpdate) {
+    //            Debug.Log(item);
+    //        }
+    //        catalogsToUpdate.AddRange(op.Result);
+    //    };
+    //    yield return checkForUpdateHandle;
+    //    if (catalogsToUpdate.Count > 0) {
+    //        AsyncOperationHandle<List<IResourceLocator>> updateHandle = Addressables.UpdateCatalogs(catalogsToUpdate);
+    //        yield return updateHandle;
+    //    }
+    //}
+
+
+
+    //private void UpdateCatalogs_Completed(AsyncOperationHandle<List<UnityEngine.AddressableAssets.ResourceLocators.IResourceLocator>> obj) {
+    //    Debug.Log("UpdateCatalogs_Completed");
+    //    if (obj.Result != null) {
+
+    //        foreach (var item in obj.Result) {
+    //            Debug.Log(item.LocatorId);
+    //            foreach (var name in item.Keys) {
+    //                Debug.Log(name);
+
+    //            }
+    //            Addressables.DownloadDependenciesAsync(item).Completed += DownloadDependenciesAsync_Completed;
+    //        }
+    //    }
+
+
+
+    //}
+
+    //private void DownloadDependenciesAsync_Completed(AsyncOperationHandle obj) {
+    //    Debug.Log("DownloadDependenciesAsync_Completed");
+    //    Debug.Log($"{obj},{obj.Result}");
+    //}
+
+    //private void CheckForCatalogUpdates_Completed(AsyncOperationHandle<List<string>> obj) {
+    //    Debug.Log("CheckForCatalogUpdates_Completed");
+    //    if (obj.Result != null) {
+    //        foreach (var item in obj.Result) {
+    //            Debug.Log(item);
+    //        }
+    //    }
+
+    //}
 
     //private void StartScene_Completed(AsyncOperationHandle<List<UnityEngine.AddressableAssets.ResourceLocators.IResourceLocator>> obj) {
     //    Addressables.LoadSceneAsync("GirlScene");
