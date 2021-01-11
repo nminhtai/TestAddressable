@@ -51,34 +51,34 @@ public class StartScene : MonoBehaviour {
     //}
 
     const string label = "remote";
-    IEnumerator Start() {
+    void Start() {
         Debug.Log("StartScene Start");
-        AsyncOperationHandle<IResourceLocator> handle = Addressables.InitializeAsync();
-        yield return handle;
+        Addressables.InitializeAsync().Completed += initHandle => {
+            Addressables.CheckForCatalogUpdates().Completed += checkForUpdateHandle => {
+                Debug.Log("CheckForCatalogUpdates complete");
+                if (checkForUpdateHandle.Result.Count > 0) {
+                    foreach (var str in checkForUpdateHandle.Result) {
+                        Debug.Log($"update: {str}");
+                    }
 
-
-        List<string> updates = new List<string>();
-        Addressables.CheckForCatalogUpdates().Completed += op => {
-            Debug.Log("CheckForCatalogUpdates");
-            updates.AddRange(op.Result);
-            foreach (var item in updates) {
-                Debug.Log(item);
-            }
-        };
-
-
-
-        Addressables.GetDownloadSizeAsync(label).Completed += sizeOp=> {
-            Debug.Log($"GetDownloadSizeAsync {sizeOp.Result}");
-            Addressables.DownloadDependenciesAsync(label).Completed += downloadOp => {
-                Debug.Log($"Download Done");
-                Addressables.LoadSceneAsync("GirlScene");
+                    Addressables.UpdateCatalogs().Completed += updateHandle => {
+                        Debug.Log("UpdateCatalogs complete");
+                        Addressables.GetDownloadSizeAsync(label).Completed += sizeOp => {
+                            Debug.Log($"GetDownloadSizeAsync_Completed: size {sizeOp.Result}");
+                            var handle = Addressables.DownloadDependenciesAsync(label);
+                            handle.Completed += downloadHandle => {
+                                Debug.Log("download complete");
+                                Addressables.LoadSceneAsync("GirlScene");
+                            };
+                        };
+                    };
+                }
+                else {
+                    Debug.Log("there is no update");
+                    Addressables.LoadSceneAsync("GirlScene");
+                }
             };
         };
-
-
-        //StartCoroutine(PercentTracking());
-        yield break;
     }
 
     IEnumerator PercentTracking() {
