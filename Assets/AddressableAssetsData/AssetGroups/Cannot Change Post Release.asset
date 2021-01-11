@@ -10,13 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Default Local Group
+  m_Name: Cannot Change Post Release
   m_EditorClassIdentifier: 
-  m_GroupName: Default Local Group
+  m_GroupName: Cannot Change Post Release
   m_Data:
     m_SerializedData: []
   m_GUID: fa0bb731c83b7b64db81c3c6dfc1429b
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 28985806a45b5be4388dbf68ee8ff8d9
+    m_Address: star
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 28985806a45b5be4388dbf68ee8ff8d9, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 28985806a45b5be4388dbf68ee8ff8d9, type: 3}
+  - m_GUID: 4428096f94312ea47897dc358e62808d
+    m_Address: heart
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 4428096f94312ea47897dc358e62808d, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 4428096f94312ea47897dc358e62808d, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0ffd989adc129954e981fd27f8b8b4b6, type: 2}
   m_SchemaSet:

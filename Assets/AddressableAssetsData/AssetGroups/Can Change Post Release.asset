@@ -10,20 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Content Update
+  m_Name: Can Change Post Release
   m_EditorClassIdentifier: 
-  m_GroupName: Content Update
+  m_GroupName: Can Change Post Release
   m_Data:
     m_SerializedData: []
   m_GUID: ce79f7577245b3b48a84eed0f974ec42
   m_SerializeEntries:
+  - m_GUID: 003166bd27a2ec04b9cead16a741897f
+    m_Address: Button
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
   - m_GUID: 9fc0d4010bbf28b4594072e72b8655ab
     m_Address: GirlScene
     m_ReadOnly: 0
     m_SerializedLabels:
     - remote
-    m_MainAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-    m_TargetAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: e84bfdc56443e3b428e02eeae04a44ed
     m_Address: PlantScene
     m_ReadOnly: 0
@@ -31,9 +37,15 @@ MonoBehaviour:
     - remote
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: f6654f0f7639de64a843d151643e4800
+    m_Address: coin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 0ffd989adc129954e981fd27f8b8b4b6, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d024996d4d699d446b3b162064780ec8, type: 2}
     - {fileID: 11400000, guid: cb042ffbc360f4046937eb7ba8db5a4c, type: 2}
+    - {fileID: 11400000, guid: d024996d4d699d446b3b162064780ec8, type: 2}

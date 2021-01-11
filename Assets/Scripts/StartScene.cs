@@ -8,8 +8,8 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 public class StartScene : MonoBehaviour {
 
     void Start() {
-        Caching.ClearCache();
-        Addressables.ClearResourceLocators();
+        //Caching.ClearCache();
+        //Addressables.ClearResourceLocators();
 
         //Debug.Log($"Application.dataPath {Application.dataPath}");
         //Debug.Log($"Application.streamingAssetsPath {Application.streamingAssetsPath}");
@@ -19,9 +19,9 @@ public class StartScene : MonoBehaviour {
         //Debug.Log($"Addressables.BuildPath {Addressables.BuildPath}");
 
 
-        Debug.Log($"UnityEngine.AddressableAssets.Addressables.RuntimePath: {UnityEngine.AddressableAssets.Addressables.RuntimePath}");
-        Debug.Log($"UnityEngine.AddressableAssets.Addressables.BuildPath: {UnityEngine.AddressableAssets.Addressables.BuildPath}");
-        Debug.Log($"UnityEngine.AddressableAssets.Addressables.PlayerBuildDataPath: {UnityEngine.AddressableAssets.Addressables.PlayerBuildDataPath}");
+        //Debug.Log($"UnityEngine.AddressableAssets.Addressables.RuntimePath: {UnityEngine.AddressableAssets.Addressables.RuntimePath}");
+        //Debug.Log($"UnityEngine.AddressableAssets.Addressables.BuildPath: {UnityEngine.AddressableAssets.Addressables.BuildPath}");
+        //Debug.Log($"UnityEngine.AddressableAssets.Addressables.PlayerBuildDataPath: {UnityEngine.AddressableAssets.Addressables.PlayerBuildDataPath}");
 
      
         Addressables.LoadSceneAsync("GirlScene");
