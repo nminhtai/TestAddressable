@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: f7c3a121ef7921a4cae2a14923b2fb04
+  - enabled: 0
+    path: Assets/Scenes/GirlScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/Scenes/PlantScene.unity
+    guid: e84bfdc56443e3b428e02eeae04a44ed
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6ea73656a165e7343b5a58643e222056, type: 2}

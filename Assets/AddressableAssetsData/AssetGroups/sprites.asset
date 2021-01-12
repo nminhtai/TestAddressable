@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: sprites
+  m_EditorClassIdentifier: 
+  m_GroupName: sprites
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d7073a3d38e6a8b47b39c42041fa6d08
+  m_SerializeEntries:
+  - m_GUID: 003166bd27a2ec04b9cead16a741897f
+    m_Address: Button
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - remote
+    m_MainAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 003166bd27a2ec04b9cead16a741897f, type: 3}
+  - m_GUID: 28985806a45b5be4388dbf68ee8ff8d9
+    m_Address: star
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - remote
+    m_MainAsset: {fileID: 2800000, guid: 28985806a45b5be4388dbf68ee8ff8d9, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 28985806a45b5be4388dbf68ee8ff8d9, type: 3}
+  - m_GUID: 4428096f94312ea47897dc358e62808d
+    m_Address: heart
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - remote
+    m_MainAsset: {fileID: 2800000, guid: 4428096f94312ea47897dc358e62808d, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 4428096f94312ea47897dc358e62808d, type: 3}
+  - m_GUID: f6654f0f7639de64a843d151643e4800
+    m_Address: coin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - remote
+    m_MainAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: f6654f0f7639de64a843d151643e4800, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0ffd989adc129954e981fd27f8b8b4b6, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 943ace47902eb46469a774a906e7119d, type: 2}
+    - {fileID: 11400000, guid: 05c6bb2516b008247ac9d6d1b16085fa, type: 2}

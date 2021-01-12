@@ -26,6 +26,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 40a54d1c93d578a489b9a60e753a8d3f, type: 2}
   - {fileID: 11400000, guid: f3b543c30e28bdc45ac14a9ed2adce18, type: 2}
   - {fileID: 11400000, guid: 48d9326a5bfd24546a780e44bc18b7c3, type: 2}
+  - {fileID: 11400000, guid: fa73499acf1b5184597adc4e27915740, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -74,7 +75,7 @@ MonoBehaviour:
       - m_Id: cf4b223f368b330439cab297f8d098f7
         m_Value: ServerData/[BuildTarget]
       - m_Id: 99e0473ecf9db934c953708c5f5d62ac
-        m_Value: https://res.cloudinary.com/nminhtai/raw/upload/v1610174647/testaa/[BuildTarget]
+        m_Value: https://res.cloudinary.com/nminhtai/raw/upload/testaa/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: d4bd4b248e103c948a5b0eadcdc098c4
       m_Name: BuildTarget
